@@ -5,6 +5,8 @@
   <!-- Fill some color-->  
   <script type="text/javascript">
 
+
+
   		function randomcolor(){
   			return '#'+(Math.random()*0xFFFFFF<<0).toString(16);
   		} 
@@ -12,6 +14,8 @@
   		function fillcolor(){
 			var canvas=document.getElementById('Teapot');
   			var context=canvas.getContext('2d');
+  			<!-- Check if your browser support WebGL -->
+  			if (context == null) alert("Your browser doesn't support WebGL, please try latest version of Chrome");
   			context.fillStyle=randomcolor();
   			context.fillRect(0,0,800,600);
   			}
