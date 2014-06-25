@@ -1,0 +1,24 @@
+<body onload="webGLStart();">
+  <!-- Create a canvas-->
+  <canvas id="Teapot" style="border: none;" width="800" height="600">
+
+  <!-- Fill some color-->  
+  <script type="text/javascript">
+
+  		function randomcolor(){
+  			return '#'+(Math.random()*0xFFFFFF<<0).toString(16);
+  		} 
+
+  		function fillcolor(){
+			var canvas=document.getElementById('Teapot');
+  			var context=canvas.getContext('2d');
+  			context.fillStyle=randomcolor();
+  			context.fillRect(0,0,800,600);
+  			}
+ 
+   </script>
+
+  </canvas>
+
+  <input type="button"value="Test Run"title="Test Run"onclick="fillcolor()"/></p>
+</body>
